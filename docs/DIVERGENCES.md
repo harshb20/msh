@@ -21,4 +21,4 @@
 | Full Unicode display-width editing | Input bytes are preserved, but cursor columns are byte-oriented | Correct grapheme and East Asian width handling needs a Unicode width library |
 | Interactive completion/search | Not implemented | The raw editor focuses on history and cursor keys required by the project |
 
-These boundaries make useful interview material: each omitted feature has a concrete grammar, state, or process-model cost rather than being an accidental failure.
+These features are outside the current implementation scope.

@@ -14,7 +14,7 @@
 | Job control | `&`, `jobs`, `fg`, `bg`, process groups, `tcsetpgrp()`, stopped/running/done states |
 | Signals | Ctrl+C targets the foreground job; Ctrl+Z stops it; Ctrl+D exits an empty prompt |
 | Builtins | `cd` (including `cd -`), `pwd`, `exit`, `export`, `unset`, `echo`, `jobs`, `fg`, `bg`, `history` |
-| Parsing | Single/double quotes, shell escapes, comments, `;`, `&&`, `||` |
+| Parsing | Single/double quotes, shell escapes, comments, `;`, `&&`, `\|\|` |
 | Expansion | `$VAR`, `${VAR}`, `$?`, `$$`, tilde, field splitting, and `glob()` pathname expansion |
 | Line editing | Dependency-free `termios` editor with left/right/up/down, Home/End, Delete, and history recall |
 
@@ -115,19 +115,6 @@ See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for the full data flow and in
 | `src/main.c` | Shell lifecycle and read/execute loop |
 | `tests/` | Differential, PTY, stress, syntax, and memory checks |
 | `demo/msh.cast` | Reproducible terminal recording |
-
-## Resume bullet
-
-> Built a Unix shell in C with concurrent pipelines, ordered I/O redirection, process-group job control, terminal signal routing, quote-aware expansion, and a raw-mode line editor; achieved 134/134 Bash differential cases with PTY, zombie, fd-leak, and allocation-trace verification.
-
-## Interview starting points
-
-- Why does one leaked pipe write end prevent a reader from observing EOF?
-- Why must `cd`, `export`, and job-control builtins run in the parent?
-- Why are `setpgid()` and `tcsetpgrp()` separate operations?
-- Why does the parent call `setpgid()` even though every child does too?
-- Why does a signal handler feed an event queue instead of mutating linked job structures?
-- What does a shell return when a foreground process dies from signal *N*?
 
 ## License
 
