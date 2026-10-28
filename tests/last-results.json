@@ -1,0 +1,2152 @@
+{
+  "total": 134,
+  "passed": 134,
+  "failed": 0,
+  "pass_rate": 100.0,
+  "cases": [
+    {
+      "name": "simple-01",
+      "command": "echo hello",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "hello\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "hello\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-02",
+      "command": "echo hello world",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "hello world\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "hello world\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-03",
+      "command": "printf abc",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "abc",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "abc",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-04",
+      "command": "printf '%s\\n' one two three",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one\ntwo\nthree\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one\ntwo\nthree\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-05",
+      "command": "true",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-06",
+      "command": "false",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      }
+    },
+    {
+      "name": "simple-07",
+      "command": ":",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-08",
+      "command": "echo -n no-newline",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "no-newline",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "no-newline",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-09",
+      "command": "echo first; echo second",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-10",
+      "command": "echo one; echo two; echo three",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one\ntwo\nthree\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one\ntwo\nthree\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-11",
+      "command": "printf '%s:%s\\n' left right",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "left:right\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "left:right\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "simple-12",
+      "command": "printf '[%s]\\n' ''",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "[]\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "[]\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-01",
+      "command": "echo \"a  b\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-02",
+      "command": "echo 'a  b'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-03",
+      "command": "echo a\\ \\ b",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a  b\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-04",
+      "command": "echo abc\"def\"'ghi'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "abcdefghi\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "abcdefghi\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-05",
+      "command": "echo '\"double\"'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "\"double\"\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "\"double\"\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-06",
+      "command": "echo \"'single'\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "'single'\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "'single'\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-07",
+      "command": "echo \"a\\\"b\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a\"b\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a\"b\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-08",
+      "command": "echo 'a$B'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-09",
+      "command": "echo \"a$B\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "abee\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "abee\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-10",
+      "command": "echo a\\$B",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-11",
+      "command": "echo \"a\\$B\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a$B\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-12",
+      "command": "printf '<%s>\\n' \"\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-13",
+      "command": "printf '<%s>\\n' ''",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-14",
+      "command": "printf '%s\\n' one\" two\"three",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one twothree\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one twothree\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-15",
+      "command": "echo back\\\\slash",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "back\\slash\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "back\\slash\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-16",
+      "command": "echo semi\\;colon",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "semi;colon\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "semi;colon\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-17",
+      "command": "echo pipe\\|literal",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "pipe|literal\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "pipe|literal\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "quotes-18",
+      "command": "echo amp\\&literal",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "amp&literal\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "amp&literal\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-01",
+      "command": "echo $B",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-02",
+      "command": "echo ${B}",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-03",
+      "command": "echo pre${B}post",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "prebeepost\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "prebeepost\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-04",
+      "command": "echo '$B'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "$B\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "$B\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-05",
+      "command": "echo \"$B\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "bee\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-06",
+      "command": "printf '<%s>\\n' $SPLIT",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<x>\n<y>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<x>\n<y>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-07",
+      "command": "printf '<%s>\\n' \"$SPLIT\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<x y>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<x y>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-08",
+      "command": "printf '<%s>\\n' x$SPLIT",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<xx>\n<y>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<xx>\n<y>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-09",
+      "command": "printf '<%s>\\n' $SPLIT-x",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<x>\n<y-x>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<x>\n<y-x>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-10",
+      "command": "printf '<%s>\\n' $UNSET",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-11",
+      "command": "printf '<%s>\\n' \"$UNSET\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-12",
+      "command": "false; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "1\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "1\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-13",
+      "command": "true; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-14",
+      "command": "sh -c 'exit 23'; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "23\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "23\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-15",
+      "command": "export LOCAL=value; echo $LOCAL",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "value\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "value\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-16",
+      "command": "export LOCAL='two words'; echo \"$LOCAL\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "two words\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "two words\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-17",
+      "command": "export LOCAL=value; unset LOCAL; echo x${LOCAL}y",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "xy\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "xy\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "variables-18",
+      "command": "echo $$ | grep '^[0-9][0-9]*$' > /dev/null",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-01",
+      "command": "printf 'b\\na\\n' | sort",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a\nb\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a\nb\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-02",
+      "command": "printf 'a\\nb\\na\\n' | grep a | wc -l",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "2\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "2\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-03",
+      "command": "printf 'pear\\napple\\npear\\n' | sort | uniq -c | sed 's/^ *//'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "1 apple\n2 pear\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "1 apple\n2 pear\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-04",
+      "command": "cat input.txt | grep alpha",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "alpha\nalpha\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "alpha\nalpha\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-05",
+      "command": "cat input.txt | grep -v alpha | sort",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "beta\ngamma\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "beta\ngamma\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-06",
+      "command": "cat input.txt | sort | uniq | wc -l",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-07",
+      "command": "printf abc | cat | cat | cat | wc -c",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-08",
+      "command": "printf 'x y\\nz\\n' | tr ' ' '\\n' | sort | head -n 2",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "x\ny\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "x\ny\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-09",
+      "command": "false | true; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-10",
+      "command": "true | false; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "1\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "1\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-11",
+      "command": "printf 'one\\ntwo\\nthree\\n' | head -n 2 | tail -n 1",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "two\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "two\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-12",
+      "command": "seq 5 | grep '[24]' | paste -sd, -",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "2,4\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "2,4\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "pipelines-13",
+      "command": "yes x | head -n 1",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "x\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "x\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-01",
+      "command": "echo hello > out.txt; cat out.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "hello\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "hello\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-02",
+      "command": "echo first > out.txt; echo second >> out.txt; cat out.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-03",
+      "command": "cat < input.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "alpha\nbeta\nalpha\ngamma\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "alpha\nbeta\nalpha\ngamma\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-04",
+      "command": "grep alpha < input.txt > out.txt; cat out.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "alpha\nalpha\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "alpha\nalpha\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-05",
+      "command": "printf abc | wc -c > count.txt; cat count.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "3\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-06",
+      "command": "cat input.txt | grep beta > out.txt; cat out.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "beta\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "beta\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-07",
+      "command": "echo replaced > existing.txt; cat existing.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "replaced\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "replaced\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-08",
+      "command": "echo appended >> existing.txt; cat existing.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "original\nappended\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "original\nappended\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-09",
+      "command": "sh -c 'echo problem >&2' 2> err.txt; cat err.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "problem\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "problem\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-10",
+      "command": "sh -c 'echo first >&2' 2> err.txt; sh -c 'echo second >&2' 2>> err.txt; cat err.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-11",
+      "command": "sh -c 'echo out; echo err >&2' > both.txt 2>&1; cat both.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-12",
+      "command": "sh -c 'echo out; echo err >&2' &> both.txt; cat both.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-13",
+      "command": "sh -c 'echo out; echo err >&2' &>> both.txt; cat both.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "out\nerr\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-14",
+      "command": "> empty.txt; wc -c < empty.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "0\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-15",
+      "command": "echo spaced > 'space name.txt'; cat 'space name.txt'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "spaced\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "spaced\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-16",
+      "command": "echo before > out.txt; cat < out.txt | tr a-z A-Z",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "BEFORE\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "BEFORE\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-17",
+      "command": "echo data 1> numbered.txt; cat numbered.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "data\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "data\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-18",
+      "command": "sh -c 'echo err >&2' 2>numbered.err; cat numbered.err",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "err\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "err\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "redirect-19",
+      "command": "sh -c 'echo out; echo err >&2' 2>&1 > ordered.txt; cat ordered.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "err\nout\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "err\nout\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-01",
+      "command": "true && echo yes",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-02",
+      "command": "false && echo no",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      }
+    },
+    {
+      "name": "conditionals-03",
+      "command": "false || echo fallback",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "fallback\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "fallback\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-04",
+      "command": "true || echo no",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-05",
+      "command": "true && echo first && echo second",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "first\nsecond\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-06",
+      "command": "false || echo first || echo second",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "first\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "first\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-07",
+      "command": "false && echo no || echo yes",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-08",
+      "command": "true || echo no && echo yes",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "yes\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-09",
+      "command": "sh -c 'exit 7' || echo recovered",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "recovered\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "recovered\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-10",
+      "command": "sh -c 'exit 7' && echo no; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "7\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "7\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-11",
+      "command": "true && false || echo final",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "final\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "final\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "conditionals-12",
+      "command": "false || true && echo final",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "final\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "final\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-01",
+      "command": "printf '%s\\n' *.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a.txt\nb.txt\nexisting.txt\ninput.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a.txt\nb.txt\nexisting.txt\ninput.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-02",
+      "command": "printf '%s\\n' a*.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-03",
+      "command": "printf '%s\\n' ?.log",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "c.log\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "c.log\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-04",
+      "command": "printf '%s\\n' [ab].txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "a.txt\nb.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "a.txt\nb.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-05",
+      "command": "printf '%s\\n' z*.missing",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "z*.missing\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "z*.missing\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-06",
+      "command": "printf '%s\\n' '*.txt'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-07",
+      "command": "printf '%s\\n' \\*.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-08",
+      "command": "printf '%s\\n' \"*.txt\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "*.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-09",
+      "command": "printf '%s\\n' sub/*.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "sub/nested.txt\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "sub/nested.txt\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "glob-10",
+      "command": "printf '%s\\n' no-match-?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "no-match-?\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "no-match-?\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-01",
+      "command": "echo visible # hidden words",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "visible\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "visible\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-02",
+      "command": "echo visible#not-comment",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "visible#not-comment\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "visible#not-comment\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-03",
+      "command": "# entire line",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-04",
+      "command": "echo hash\\#literal",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "hash#literal\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "hash#literal\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-05",
+      "command": "echo '# literal'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "# literal\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "# literal\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "comments-06",
+      "command": "echo \"# literal\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "# literal\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "# literal\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-01",
+      "command": "pwd",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-02",
+      "command": "cd sub; pwd",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>/sub\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>/sub\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-03",
+      "command": "cd sub; cd ..; pwd",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-04",
+      "command": "cd sub; cd -; pwd",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>\n<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>\n<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-05",
+      "command": "export A=1; export C=2; echo $A$C",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "12\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "12\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-06",
+      "command": "export A=old; export A=new; echo $A",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "new\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "new\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-07",
+      "command": "export A=1; unset A; printf '<%s>\\n' \"$A\"",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "builtins-08",
+      "command": "echo one; history",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-01",
+      "command": "exit 0",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-02",
+      "command": "exit 7",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 7
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 7
+      }
+    },
+    {
+      "name": "status-03",
+      "command": "exit 255",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 255
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 255
+      }
+    },
+    {
+      "name": "status-04",
+      "command": "exit 256",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-05",
+      "command": "sh -c 'exit 42'",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 42
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 42
+      }
+    },
+    {
+      "name": "status-06",
+      "command": "sh -c 'kill -TERM $$'; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "143\n",
+        "stderr": "Terminated\n",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "143\n",
+        "stderr": "Terminated\n",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-07",
+      "command": "sh -c 'kill -INT $$'; echo $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "130\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "130\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-08",
+      "command": "false; exit $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 1
+      }
+    },
+    {
+      "name": "status-09",
+      "command": "true; exit $?",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "status-10",
+      "command": "false || exit 19",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "",
+        "stderr": "",
+        "status": 19
+      },
+      "msh": {
+        "stdout": "",
+        "stderr": "",
+        "status": 19
+      }
+    },
+    {
+      "name": "tilde-and-sequence-01",
+      "command": "echo ~",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-02",
+      "command": "echo ~/folder",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>/folder\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>/folder\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-03",
+      "command": "printf '%s\\n' ~",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "<WORKDIR>\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-04",
+      "command": "echo one; true; echo two",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one\ntwo\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one\ntwo\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-05",
+      "command": "echo one; false; echo two",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "one\ntwo\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "one\ntwo\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-06",
+      "command": "false || echo recovered; echo done",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "recovered\ndone\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "recovered\ndone\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-07",
+      "command": "true && echo passed; echo done",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "passed\ndone\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "passed\ndone\n",
+        "stderr": "",
+        "status": 0
+      }
+    },
+    {
+      "name": "tilde-and-sequence-08",
+      "command": "echo x > out.txt; cat out.txt; echo y >> out.txt; tail -n 1 out.txt",
+      "passed": true,
+      "difference": "",
+      "bash": {
+        "stdout": "x\ny\n",
+        "stderr": "",
+        "status": 0
+      },
+      "msh": {
+        "stdout": "x\ny\n",
+        "stderr": "",
+        "status": 0
+      }
+    }
+  ]
+}

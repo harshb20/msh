@@ -1,0 +1,8 @@
+msh
+src/*.o
+__pycache__/
+*.py[cod]
+core
+core.*
+.DS_Store
+
